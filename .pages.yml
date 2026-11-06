@@ -1,0 +1,554 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: site
+    label: ওয়েবসাইটের সব লেখা, ছবি ও ভিডিও
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: video_list
+        label: ভিডিও তালিকা (উপরেরটা প্রথমে দেখাবে)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: শিরোনাম
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: caption
+            label: ছোট বিবরণ
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+          - name: link
+            label: ফেসবুক ভিডিওর লিংক
+            type: string
+          - name: thumbnail
+            label: থাম্বনেইল ছবি
+            type: image
+          - name: hidden
+            label: লুকিয়ে রাখুন
+            type: boolean
+      - name: "hero"
+        label: "শুরুর অংশ (হিরো)"
+        type: object
+        fields:
+          - name: "badge"
+            label: "উপরের ছোট লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "l1"
+            label: "শিরোনাম: প্রথম লাইন"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "l2"
+            label: "শিরোনাম: দ্বিতীয় লাইন (নীল)"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "sub"
+            label: "ছোট বিবরণ"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "role1"
+        label: "প্রথম পদবি"
+        type: object
+        fields:
+          - name: bn
+            label: বাংলা
+            type: string
+          - name: en
+            label: English
+            type: string
+      - name: "role2"
+        label: "দ্বিতীয় পদবি"
+        type: object
+        fields:
+          - name: bn
+            label: বাংলা
+            type: string
+          - name: en
+            label: English
+            type: string
+      - name: "chip2"
+        label: "ছবির উপর পদবি চিপ"
+        type: object
+        fields:
+          - name: "t"
+            label: "লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "stat"
+        label: "ফলোয়ার সংখ্যা"
+        type: object
+        fields:
+          - name: "followers"
+            label: "ফেসবুক ফলোয়ার"
+            type: object
+            fields:
+              - name: "v"
+                label: "সংখ্যা (যেমন 108000+)"
+                type: string
+              - name: "l"
+                label: "সংখ্যার নিচের লেখা"
+                type: object
+                fields:
+                  - name: bn
+                    label: বাংলা
+                    type: string
+                  - name: en
+                    label: English
+                    type: string
+      - name: "chip1"
+        label: "ছবির উপর Hasan Ali Speaks চিপ"
+        type: object
+        fields:
+          - name: "sub"
+            label: "লেখা (যেমন 108K followers)"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "roles"
+        label: "\"আমার কাজ\" অংশের শিরোনাম"
+        type: object
+        fields:
+          - name: "kicker"
+            label: "ছোট শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "title"
+            label: "বড় শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "creator"
+        label: "কনটেন্ট ক্রিয়েটর কার্ড"
+        type: object
+        fields:
+          - name: "desc"
+            label: "লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "founder"
+        label: "উদ্যোক্তা কার্ড"
+        type: object
+        fields:
+          - name: "desc"
+            label: "লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "flycare"
+        label: "Fly Care"
+        type: object
+        fields:
+          - name: "desc"
+            label: "লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "since"
+            label: "শুরুর বছর"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "btn"
+            label: "বোতামের লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "umrah"
+        label: "FLY UMRAH AND HAJJ অংশ"
+        type: object
+        fields:
+          - name: "since"
+            label: "লোগোর পাশের লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "title"
+            label: "শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "desc"
+            label: "বিবরণ"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+          - name: "points"
+            label: "বিশেষ কথা (প্রতি লাইনে একটি)"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+          - name: "btn"
+            label: "বোতামের লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "domain"
+            label: "বোতামের নিচের লেখা"
+            type: string
+          - name: "badge"
+            label: "ছবির উপর ব্যাজ"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "videos"
+        label: "ভিডিও অংশের লেখা"
+        type: object
+        fields:
+          - name: "title"
+            label: "শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "sub"
+            label: "বিবরণ"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "empty"
+            label: "ভিডিও না থাকলে"
+            type: object
+            fields:
+              - name: "t"
+                label: "শিরোনাম"
+                type: object
+                fields:
+                  - name: bn
+                    label: বাংলা
+                    type: string
+                  - name: en
+                    label: English
+                    type: string
+              - name: "s"
+                label: "লেখা"
+                type: object
+                fields:
+                  - name: bn
+                    label: বাংলা
+                    type: string
+                  - name: en
+                    label: English
+                    type: string
+      - name: "updates"
+        label: "লেখা ও আপডেট অংশ"
+        type: object
+        fields:
+          - name: "title"
+            label: "শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+      - name: "quote"
+        label: "উক্তি"
+        type: object
+        fields:
+          - name: "text"
+            label: "উক্তির লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "cta"
+        label: "যোগাযোগ কার্ড (হোম পেজ)"
+        type: object
+        fields:
+          - name: "title"
+            label: "শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "sub"
+            label: "লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "contact"
+        label: "যোগাযোগ"
+        type: object
+        fields:
+          - name: "sub"
+            label: "যোগাযোগ পেজের লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "phone"
+            label: "ফোন নম্বর"
+            type: string
+          - name: "email"
+            label: "ইমেইল"
+            type: string
+      - name: "about"
+        label: "পরিচিতি পেজ"
+        type: object
+        fields:
+          - name: "title"
+            label: "শিরোনাম"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: string
+              - name: en
+                label: English
+                type: string
+          - name: "body"
+            label: "লেখা (অনুচ্ছেদের মাঝে একটি খালি লাইন)"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "footer"
+        label: "ফুটার"
+        type: object
+        fields:
+          - name: "tag"
+            label: "ফুটারের লেখা"
+            type: object
+            fields:
+              - name: bn
+                label: বাংলা
+                type: text
+              - name: en
+                label: English
+                type: text
+      - name: "link"
+        label: "লিংকসমূহ"
+        type: object
+        fields:
+          - name: "fbpage"
+            label: "Hasan Ali Speaks ফেসবুক পেজ"
+            type: string
+          - name: "fbprofile"
+            label: "ফেসবুক প্রোফাইল"
+            type: string
+          - name: "umrah"
+            label: "FLY UMRAH AND HAJJ ওয়েবসাইট"
+            type: string
+          - name: "flycare"
+            label: "Fly Care ওয়েবসাইট"
+            type: string
+          - name: "flycarefb"
+            label: "Fly Care ফেসবুক পেজ"
+            type: string
+          - name: "umrahfb"
+            label: "FLY UMRAH AND HAJJ ফেসবুক পেজ"
+            type: string
+          - name: "whatsapp"
+            label: "WhatsApp লিংক (https://wa.me/880...)"
+            type: string
+          - name: "youtube"
+            label: "YouTube (খালি রাখলে লুকানো থাকবে)"
+            type: string
+          - name: "linkedin"
+            label: "LinkedIn (খালি রাখলে লুকানো থাকবে)"
+            type: string
+      - name: "img"
+        label: "ছবি (খালি রাখলে আগের ছবি)"
+        type: object
+        fields:
+          - name: "hero"
+            label: "মূল ছবি (কম্পিউটারে, চওড়া)"
+            type: image
+          - name: "heroM"
+            label: "মূল ছবি (মোবাইলে, লম্বা)"
+            type: image
+          - name: "umrah"
+            label: "ওমরাহ অংশের ছবি"
+            type: image
+          - name: "about"
+            label: "পরিচিতি পেজের ছবি"
+            type: image
+      - name: "logo"
+        label: "লোগো (খালি রাখলে আগের লোগো)"
+        type: object
+        fields:
+          - name: "umrah"
+            label: "FLY UMRAH AND HAJJ লোগো"
+            type: image
+          - name: "flycare"
+            label: "Fly Care লোগো"
+            type: image
+      - name: "show"
+        label: "কোন অংশ দেখাবে (চালু/বন্ধ)"
+        type: object
+        fields:
+          - name: "roles"
+            label: "\"আমার কাজ\" অংশ"
+            type: boolean
+          - name: "flycare"
+            label: "Fly Care"
+            type: boolean
+          - name: "umrah"
+            label: "FLY UMRAH AND HAJJ অংশ"
+            type: boolean
+          - name: "videos"
+            label: "ভিডিও অংশ"
+            type: boolean
+          - name: "updates"
+            label: "লেখা ও আপডেট"
+            type: boolean
+          - name: "writing"
+            label: "লেখা ও আপডেট চালু"
+            type: boolean
+          - name: "quote"
+            label: "উক্তি"
+            type: boolean
+          - name: "cta"
+            label: "যোগাযোগ কার্ড"
+            type: boolean

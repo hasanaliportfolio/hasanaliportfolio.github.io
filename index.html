@@ -879,7 +879,7 @@ legend{padding:0 8px;font-weight:800;font-size:13px;letter-spacing:.1em;text-tra
 <script>window.__STATIC={"site": {}, "posts": [{"id":"v1363932338815960","kind":"video","category":"speaks","title":{"bn":"মডেল মসজিদ কি, কেন?","en":"Model mosques: what are they, and why?"},"summary":{"bn":"মডেল মসজিদের সব কিছু এই এক ভিডিওতে তুলে ধরা হয়েছে।","en":"Everything about model mosques, in one video."},"link":"https://www.facebook.com/watch/?v=1363932338815960","source":"facebook","image":"model mos.jpg","featured":false,"hidden":false,"sample":false,"createdAt":3000},{"id":"v1698239551823051","kind":"video","category":"speaks","title":{"bn":"২০২৬-এ এসেও বাংলাদেশের কওমী মাদ্রাসার ছাত্ররা এতটা পিছিয়ে কেন?","en":"Why are Bangladesh's Qawmi madrasa students still so far behind in 2026?"},"summary":{"bn":"","en":""},"link":"https://www.facebook.com/reel/1698239551823051","source":"facebook","image":"thumbnail-hasan-3x4.jpg","featured":false,"hidden":false,"sample":false,"createdAt":2999},{"id":"v1706965037518173","kind":"video","category":"speaks","title":{"bn":"২০২৭ সালে কামব্যাক দিতে চান?","en":"Want to make a comeback in 2027?"},"summary":{"bn":"তাহলে ২০২৬ শেষ হওয়ার আগেই এই ৫টি ভিডিও দেখুন!","en":"Then watch these 5 videos before 2026 ends!"},"link":"https://www.facebook.com/reel/1706965037518173","source":"facebook","image":"THUMBNAIL v7 4K - 5 Videos for 2027 copy.jpg","featured":false,"hidden":false,"sample":false,"createdAt":2998}], "cats": []};</script>
 <script>
 (function(){
-'use strict';
+'use strict';var BLOB='/_blob/';
 var $=function(s,r){return (r||document).querySelector(s)};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var RM=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -999,7 +999,7 @@ function h(tag,a){var el=document.createElement(tag);if(a){for(var k in a){var v
   for(var i=2;i<arguments.length;i++)add(el,arguments[i]);return el}
 function add(el,c){if(c==null||c===false)return;if(Array.isArray(c)){c.forEach(function(x){add(el,x)});return}el.appendChild(typeof c==='string'?document.createTextNode(c):c)}
 function svgUse(id,s){var n=document.createElementNS('http://www.w3.org/2000/svg','svg');n.setAttribute('width',s||16);n.setAttribute('height',s||16);n.setAttribute('aria-hidden','true');var u=document.createElementNS('http://www.w3.org/2000/svg','use');u.setAttribute('href','#'+id);n.appendChild(u);return n}
-function isAsset(id){return typeof id==='string'&&/^[A-Za-z0-9]{12,80}$/.test(id)}
+function isAsset(id){return typeof id==='string'&&(/^[A-Za-z0-9]{12,80}$/.test(id)||(BLOB===''&&/^[\w\-. \/]+\.(jpe?g|png|webp|gif|svg)$/i.test(id)))}
 function safeUrl(u){return (typeof u==='string'&&/^https:\/\/[^\s<>"]+$/i.test(u.trim()))?u.trim():''}
 function srcOf(u){if(/youtu\.?be/i.test(u))return 'youtube';if(/facebook\.com|fb\.watch/i.test(u))return 'facebook';return u?'web':''}
 function cat(id){for(var i=0;i<S.cats.length;i++)if(S.cats[i].id===id)return S.cats[i];for(var j=0;j<DEFAULT_CATS.length;j++)if(DEFAULT_CATS[j].id===id)return DEFAULT_CATS[j];return {id:id||'personal',bn:'অন্যান্য',en:'Other',group:'personal'}}
@@ -1033,12 +1033,12 @@ function applyContent(){
   $$('[data-href]').forEach(function(a){var u=link(a.getAttribute('data-href'));if(u)a.setAttribute('href',u);else a.removeAttribute('href')});
   $$('[data-showlink]').forEach(function(el){el.hidden=!link(el.getAttribute('data-showlink'))});
   $$('[data-show]').forEach(function(el){el.hidden=!V(el.getAttribute('data-show'))});
-  $$('[data-img]').forEach(function(img){if(!img.dataset.orig)img.dataset.orig=img.getAttribute('src');var id=V(img.getAttribute('data-img'));img.setAttribute('src',isAsset(id)?'/_blob/'+id:img.dataset.orig)});
+  $$('[data-img]').forEach(function(img){if(!img.dataset.orig)img.dataset.orig=img.getAttribute('src');var id=V(img.getAttribute('data-img'));img.setAttribute('src',isAsset(id)?BLOB+id:img.dataset.orig)});
   $$('[data-imgset]').forEach(function(s){if(!s.dataset.orig)s.dataset.orig=s.getAttribute('srcset');var id=V(s.getAttribute('data-imgset'));var hid=V('img.hero');
-    s.setAttribute('srcset',isAsset(id)?'/_blob/'+id:(isAsset(hid)?'/_blob/'+hid:s.dataset.orig))});
+    s.setAttribute('srcset',isAsset(id)?BLOB+id:(isAsset(hid)?BLOB+hid:s.dataset.orig))});
   $$('[data-logo]').forEach(function(el){
     var k=el.getAttribute('data-logo'),id=V(k);el.textContent='';
-    if(isAsset(id)){el.appendChild(h('img',{src:'/_blob/'+id,alt:''}))}
+    if(isAsset(id)){el.appendChild(h('img',{src:BLOB+id,alt:''}))}
     else if(LOGO_DEF[k]){el.appendChild(h('img',{src:LOGO_DEF[k],alt:''}))}
     else{el.appendChild(h('span',{class:'monogram',text:el.getAttribute('data-mono')||''}))}
   });
@@ -1053,7 +1053,7 @@ function art(kind){
 }
 function pmedia(p){
   var box=h('span',{class:'pm'});
-  if(isAsset(p.image)||/\.(jpe?g|png|webp)$/i.test(p.image||''))box.appendChild(h('img',{src:isAsset(p.image)?'/_blob/'+p.image:encodeURI(p.image),style:'object-position:50% 18%',alt:'',loading:'lazy',decoding:'async'}));
+  if(isAsset(p.image)||/\.(jpe?g|png|webp)$/i.test(p.image||''))box.appendChild(h('img',{src:isAsset(p.image)?BLOB+p.image:encodeURI(p.image),style:'object-position:50% 18%',alt:'',loading:'lazy',decoding:'async'}));
   else box.insertAdjacentHTML('beforeend',art(p.kind));
   var b=h('span',{class:'badges'});
   if(p.sample)b.appendChild(h('span',{class:'tagp sample',text:L('নমুনা','Sample')}));
@@ -1123,8 +1123,8 @@ function renderGallery(){
   var photos=sorted(pub().filter(function(p){return p.kind==='photo'&&isAsset(p.image)}));
   w.hidden=!photos.length;if(!photos.length)return;
   var gal=h('div',{class:'gallery'});
-  photos.forEach(function(p,i){var b=h('button',{type:'button','aria-label':T(p.title)||L('ছবি','Photo')},h('img',{src:'/_blob/'+p.image,alt:'',loading:'lazy'}));
-    b.addEventListener('click',function(){var c=h('div');c.appendChild(h('img',{src:'/_blob/'+p.image,alt:T(p.title)}));c.appendChild(h('div',{class:'mb'},h('h2',{class:'h3',id:'modal-title',text:T(p.title)}),T(p.summary)?h('p',{class:'muted',style:'margin-top:8px',text:T(p.summary)}):null));openModal(c)});
+  photos.forEach(function(p,i){var b=h('button',{type:'button','aria-label':T(p.title)||L('ছবি','Photo')},h('img',{src:BLOB+p.image,alt:'',loading:'lazy'}));
+    b.addEventListener('click',function(){var c=h('div');c.appendChild(h('img',{src:BLOB+p.image,alt:T(p.title)}));c.appendChild(h('div',{class:'mb'},h('h2',{class:'h3',id:'modal-title',text:T(p.title)}),T(p.summary)?h('p',{class:'muted',style:'margin-top:8px',text:T(p.summary)}):null));openModal(c)});
     gal.appendChild(reveal(b,(i%4)*60))});
   g.appendChild(gal);observe(g);
 }
@@ -1227,7 +1227,7 @@ function field(f,D){
   if(type==='img'||type==='logo'){
     wrap.appendChild(h('span',{class:'flabel',text:lab}));
     var prev=h('span',{class:'prev'+(type==='logo'?' contain':'')});
-    var paint=function(){prev.textContent='';var v=D[k];if(isAsset(v))prev.appendChild(h('img',{src:'/_blob/'+v,alt:''}));else if(type==='logo'&&LOGO_DEF[k]){prev.appendChild(h('img',{src:LOGO_DEF[k],alt:''}));prev.style.background='#0A111D'}else if(type==='img'){var o=$('[data-img="'+k+'"]')||$('[data-imgset="'+k+'"]');var s=o&&(o.dataset.orig||o.getAttribute('src'));if(s&&s.indexOf('data:')===0)prev.appendChild(h('img',{src:s,alt:''}));else prev.textContent=L('ডিফল্ট','Default')}else prev.textContent=L('লোগো নেই','No logo');rm.hidden=!isAsset(D[k])};
+    var paint=function(){prev.textContent='';var v=D[k];if(isAsset(v))prev.appendChild(h('img',{src:BLOB+v,alt:''}));else if(type==='logo'&&LOGO_DEF[k]){prev.appendChild(h('img',{src:LOGO_DEF[k],alt:''}));prev.style.background='#0A111D'}else if(type==='img'){var o=$('[data-img="'+k+'"]')||$('[data-imgset="'+k+'"]');var s=o&&(o.dataset.orig||o.getAttribute('src'));if(s&&s.indexOf('data:')===0)prev.appendChild(h('img',{src:s,alt:''}));else prev.textContent=L('ডিফল্ট','Default')}else prev.textContent=L('লোগো নেই','No logo');rm.hidden=!isAsset(D[k])};
     var fi=h('input',{type:'file',accept:'image/*','aria-label':lab});
     var up=h('span',{class:'btn btn-ghost btn-sm file-btn'},L('ছবি আপলোড','Upload'),fi);
     var rm=h('button',{class:'btn btn-ghost btn-sm',type:'button',text:L('ডিফল্টে ফেরান','Reset to default')});
@@ -1308,7 +1308,7 @@ function fillSelects(){
   S.cats.forEach(function(x){c.appendChild(h('option',{value:x.id,text:L(x.bn,x.en)+(x.group==='business'?' · '+L('ব্যবসায়িক','business'):'')}))});
   if(kv)k.value=kv;if(cv)c.value=cv;
 }
-function setPreview(){var pv=$('#f-img-prev');pv.textContent='';if(isAsset(S.adm.image)){pv.appendChild(h('img',{src:'/_blob/'+S.adm.image,alt:''}));$('#f-img-remove').hidden=false}else{pv.textContent=L('ছবি নেই','No image');$('#f-img-remove').hidden=true}}
+function setPreview(){var pv=$('#f-img-prev');pv.textContent='';if(isAsset(S.adm.image)){pv.appendChild(h('img',{src:BLOB+S.adm.image,alt:''}));$('#f-img-remove').hidden=false}else{pv.textContent=L('ছবি নেই','No image');$('#f-img-remove').hidden=true}}
 function openEditor(p,kind){
   S.adm.editing=p?p.id:null;S.adm.image=p&&isAsset(p.image)?p.image:'';S.adm.tab='edit';fillSelects();
   var g=function(o,l){return o&&typeof o==='object'?(o[l]||''):(l==='bn'&&typeof o==='string'?o:'')};
@@ -1445,7 +1445,7 @@ function initData(){
   var C=window.claude;
   if(!C||typeof C.use!=='function'){
     var ST=window.__STATIC;
-    if(ST){var o={},vals=ST.site||{};for(var k in vals)o[dec(k)]=vals[k];S.site=o;S.posts=(ST.posts||[]).filter(validPost);if(ST.cats&&ST.cats.length)S.cats=ST.cats;S.postsReady=true;S.data='static';applyContent();renderAll();return}
+    if(ST){BLOB='';S.data='static';fetch('content.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(C){var o={},vals=ST.site||{};for(var k in vals)o[dec(k)]=vals[k];var posts=ST.posts||[];if(C){var fl=function(x,pre){for(var k in x){if(k==='video_list')continue;var v=x[k],key=pre?pre+'.'+k:k;if(v&&typeof v==='object'&&!Array.isArray(v)&&!('bn' in v||'en' in v))fl(v,key);else o[key]=(typeof v==='string')?v.replace(/^\//,''):v}};fl(C,'');if(Array.isArray(C.video_list))posts=C.video_list.filter(function(x){return x&&x.link}).map(function(x,i){return {id:'cv'+i,kind:'video',category:'speaks',title:x.title||{},summary:x.caption||{},link:x.link,image:String(x.thumbnail||'').replace(/^\//,''),hidden:!!x.hidden,featured:false,createdAt:9000-i}})}S.site=o;S.posts=posts.filter(validPost);if(ST.cats&&ST.cats.length)S.cats=ST.cats;S.postsReady=true;applyContent();renderAll()});return}
     S.data='absent';renderAll();return}
   Promise.resolve().then(function(){return C.use('user')}).then(function(u){if(!u)return;return Promise.all([u.canEdit(),u.id()]).then(function(r){S.canEdit=!!r[0];S.uid=r[1]||null})})
   .catch(function(){}).then(function(){return C.use('db')}).then(function(d){

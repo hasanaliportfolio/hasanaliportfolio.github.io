@@ -1,0 +1,250 @@
+{
+  "hero": {
+    "badge": {
+      "bn": "Hasan Ali Speaks — নতুন ভিডিও দেখুন",
+      "en": "Hasan Ali Speaks — watch the latest"
+    },
+    "l1": {
+      "bn": "আসসালামু আলাইকুম,",
+      "en": "Assalamu Alaikum,"
+    },
+    "l2": {
+      "bn": "আমি হাসান আলী।",
+      "en": "I'm Hasan Ali."
+    },
+    "sub": {
+      "bn": "Hasan Ali Speaks-এর মাধ্যমে গঠনমূলক আলোচনা তুলে ধরি, এবং FLY UMRAH AND HAJJ-এর মাধ্যমে মানুষের ওমরাহ সফরকে সহজ ও নির্ভরযোগ্য করার চেষ্টা করি।",
+      "en": "Through Hasan Ali Speaks I share constructive discussions, and through FLY UMRAH AND HAJJ I work to make people's Umrah journeys easy and dependable."
+    }
+  },
+  "role1": {
+    "bn": "Digital Content Creator",
+    "en": "Digital Content Creator"
+  },
+  "role2": {
+    "bn": "Entrepreneur",
+    "en": "Entrepreneur"
+  },
+  "chip2": {
+    "t": {
+      "bn": "প্রতিষ্ঠাতা",
+      "en": "Founder"
+    }
+  },
+  "stat": {
+    "followers": {
+      "v": "108000+",
+      "l": {
+        "bn": "Facebook ফলোয়ার",
+        "en": "Facebook followers"
+      }
+    }
+  },
+  "chip1": {
+    "sub": {
+      "bn": "108K ফলোয়ার",
+      "en": "108K followers"
+    }
+  },
+  "roles": {
+    "kicker": {
+      "bn": "What I do",
+      "en": "What I do"
+    },
+    "title": {
+      "bn": "আমার কাজের জগৎ",
+      "en": "My work"
+    }
+  },
+  "creator": {
+    "desc": {
+      "bn": "Hasan Ali Speaks পেজে বিভিন্ন বিষয়ে সহজ ভাষায় তথ্যবহুল ভিডিও বানাই।",
+      "en": "On the Hasan Ali Speaks page I make informative videos on different topics, in simple language."
+    }
+  },
+  "founder": {
+    "desc": {
+      "bn": "ওমরাহ ও হজ এজেন্সি। ২০২৪ সাল থেকে বিশ্বস্ততার সাথে যাত্রীদের সেবা দিয়ে আসছি।",
+      "en": "An Umrah and Hajj agency, serving pilgrims with trust since 2024."
+    }
+  },
+  "flycare": {
+    "desc": {
+      "bn": "দীর্ঘদিন ধরে Fly Care ট্রাভেল এজেন্সির সাথে যুক্ত।",
+      "en": "Long associated with Fly Care travel agency."
+    },
+    "since": {
+      "bn": "Since 2014",
+      "en": "Since 2014"
+    },
+    "btn": {
+      "bn": "flycare.com.bd",
+      "en": "flycare.com.bd"
+    }
+  },
+  "umrah": {
+    "since": {
+      "bn": "Since 2024",
+      "en": "Since 2024"
+    },
+    "title": {
+      "bn": "বিশ্বস্ততার সাথে ওমরাহ ও হজ সেবা",
+      "en": "Umrah and Hajj service you can trust"
+    },
+    "desc": {
+      "bn": "FLY UMRAH AND HAJJ একটি ওমরাহ ও হজ এজেন্সি। আমরা বিশ্বস্ততা ও আন্তরিকতার সাথে সেবা দিয়ে থাকি, যাতে প্রতিটি যাত্রী নিশ্চিন্তে ইবাদতে মন দিতে পারেন।",
+      "en": "FLY UMRAH AND HAJJ is an Umrah and Hajj agency. We serve with trust and sincerity, so every pilgrim can focus on worship with peace of mind."
+    },
+    "points": {
+      "bn": "বিশ্বস্ততা ও স্বচ্ছতার সাথে সেবা\nযাত্রার শুরু থেকে শেষ পর্যন্ত পাশে থাকি\nআন্তরিক পরামর্শ, সহজ প্রক্রিয়া",
+      "en": "Service built on trust and transparency\nBy your side from start to finish\nSincere guidance, a simple process"
+    },
+    "btn": {
+      "bn": "FLY UMRAH AND HAJJ",
+      "en": "FLY UMRAH AND HAJJ"
+    },
+    "domain": "flyumrah.net",
+    "badge": {
+      "bn": "বিশ্বস্ত সেবা",
+      "en": "Trusted service"
+    }
+  },
+  "videos": {
+    "title": {
+      "bn": "সর্বশেষ ভিডিও",
+      "en": "Latest videos"
+    },
+    "sub": {
+      "bn": "Hasan Ali Speaks-এর সাম্প্রতিক কিছু ভিডিও।",
+      "en": "A few recent videos from Hasan Ali Speaks."
+    },
+    "empty": {
+      "t": {
+        "bn": "শিগগিরই নতুন ভিডিও",
+        "en": "New videos soon"
+      },
+      "s": {
+        "bn": "এখানে সর্বশেষ ভিডিও দেখাবে। ততক্ষণ ফেসবুকে দেখতে পারেন।",
+        "en": "The latest videos will appear here. Meanwhile, watch on Facebook."
+      }
+    }
+  },
+  "updates": {
+    "title": {
+      "bn": "সাম্প্রতিক লেখা ও আপডেট",
+      "en": "Recent writing & updates"
+    }
+  },
+  "quote": {
+    "text": {
+      "bn": "আমি বিশ্বাস করি, শেখার কোনো শেষ নেই। নতুন কিছু শেখা, চিন্তা করা আর সেই ধারণাকে বাস্তব কাজে রূপ দেওয়ার মধ্য দিয়েই মানুষ এগিয়ে যায়।",
+      "en": "I believe learning never ends. By learning, thinking and turning ideas into real work, a person keeps moving forward."
+    }
+  },
+  "cta": {
+    "title": {
+      "bn": "যোগাযোগ করুন",
+      "en": "Get in touch"
+    },
+    "sub": {
+      "bn": "ওমরাহ বিষয়ে জানতে, কনটেন্ট নিয়ে সহযোগিতা কিংবা যেকোনো প্রয়োজনে সরাসরি লিখুন।",
+      "en": "For Umrah questions, content collaboration or anything else, write directly."
+    }
+  },
+  "contact": {
+    "sub": {
+      "bn": "ওমরাহ, কনটেন্ট কিংবা যেকোনো প্রয়োজনে সরাসরি যোগাযোগ করুন।",
+      "en": "For Umrah, content or anything else, reach out directly."
+    },
+    "phone": "+880 1994-511063",
+    "email": "hasan.fegs@gmail.com"
+  },
+  "about": {
+    "title": {
+      "bn": "আমি হাসান আলী",
+      "en": "I'm Hasan Ali"
+    },
+    "body": {
+      "bn": "একজন ডিজিটাল কনটেন্ট ক্রিয়েটর ও উদ্যোক্তা।\n\nHasan Ali Speaks পেজে বিভিন্ন বিষয়ে সহজ ভাষায় তথ্যবহুল ভিডিও বানাই।\n\n২০২৪ সালে FLY UMRAH AND HAJJ প্রতিষ্ঠা করি। এটি একটি ওমরাহ ও হজ এজেন্সি, যেখানে বিশ্বস্ততার সাথে যাত্রীদের সেবা দিয়ে থাকি। পাশাপাশি দীর্ঘদিন ধরে Fly Care ট্রাভেল এজেন্সির সাথে যুক্ত।\n\nআমি বিশ্বাস করি, শেখার কোনো শেষ নেই।",
+      "en": "A digital content creator and entrepreneur.\n\nOn the Hasan Ali Speaks page I make informative videos on different topics, in simple language.\n\nIn 2024 I founded FLY UMRAH AND HAJJ, an Umrah and Hajj agency where we serve pilgrims with trust. I am also long associated with Fly Care travel agency.\n\nI believe learning never ends."
+    }
+  },
+  "footer": {
+    "tag": {
+      "bn": "Digital Content Creator ও Entrepreneur। Hasan Ali Speaks-এর নির্মাতা এবং FLY UMRAH AND HAJJ-এর প্রতিষ্ঠাতা।",
+      "en": "Digital Content Creator and Entrepreneur. Creator of Hasan Ali Speaks and founder of FLY UMRAH AND HAJJ."
+    }
+  },
+  "link": {
+    "fbpage": "https://www.facebook.com/share/1Jmi76r9SG/",
+    "fbprofile": "https://www.facebook.com/share/1CK3f2DyzW/",
+    "umrah": "https://flyumrah.net",
+    "flycare": "https://www.flycare.com.bd",
+    "flycarefb": "https://web.facebook.com/flycare.com.bd",
+    "umrahfb": "https://www.facebook.com/profile.php?id=61571865988133",
+    "whatsapp": "https://wa.me/8801994511063",
+    "youtube": "",
+    "linkedin": ""
+  },
+  "img": {
+    "hero": "",
+    "heroM": "",
+    "umrah": "",
+    "about": ""
+  },
+  "logo": {
+    "umrah": "",
+    "flycare": ""
+  },
+  "show": {
+    "roles": true,
+    "flycare": true,
+    "umrah": true,
+    "videos": true,
+    "updates": true,
+    "writing": false,
+    "quote": true,
+    "cta": true
+  },
+  "video_list": [
+    {
+      "title": {
+        "bn": "মডেল মসজিদ কি, কেন?",
+        "en": "Model mosques: what are they, and why?"
+      },
+      "caption": {
+        "bn": "মডেল মসজিদের সব কিছু এই এক ভিডিওতে তুলে ধরা হয়েছে।",
+        "en": "Everything about model mosques, in one video."
+      },
+      "link": "https://www.facebook.com/watch/?v=1363932338815960",
+      "thumbnail": "model mos.jpg",
+      "hidden": false
+    },
+    {
+      "title": {
+        "bn": "২০২৬-এ এসেও বাংলাদেশের কওমী মাদ্রাসার ছাত্ররা এতটা পিছিয়ে কেন?",
+        "en": "Why are Bangladesh's Qawmi madrasa students still so far behind in 2026?"
+      },
+      "caption": {
+        "bn": "",
+        "en": ""
+      },
+      "link": "https://www.facebook.com/reel/1698239551823051",
+      "thumbnail": "thumbnail-hasan-3x4.jpg",
+      "hidden": false
+    },
+    {
+      "title": {
+        "bn": "২০২৭ সালে কামব্যাক দিতে চান?",
+        "en": "Want to make a comeback in 2027?"
+      },
+      "caption": {
+        "bn": "তাহলে ২০২৬ শেষ হওয়ার আগেই এই ৫টি ভিডিও দেখুন!",
+        "en": "Then watch these 5 videos before 2026 ends!"
+      },
+      "link": "https://www.facebook.com/reel/1706965037518173",
+      "thumbnail": "THUMBNAIL v7 4K - 5 Videos for 2027 copy.jpg",
+      "hidden": false
+    }
+  ]
+}
